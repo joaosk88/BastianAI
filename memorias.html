@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar (Android only) -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>Betha Assistente</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="css/framework7-bundle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- App root element -->
+    <div id="app">
+
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Initial Page, "data-name" contains page name -->
+            <div data-name="memorias" class="page">
+
+                <!-- Top Navbar -->
+                <div class="navbar border-bottom-primary">
+                    <div class="navbar-bg bg-black"></div>
+                    <div class="navbar-inner">
+                        <a href="#" class="back left padding-left txt-primary"><i class="mdi mdi-arrow-left"></i> </a>
+                        <div class="title txt-primary"><i class="mdi mdi-brain"></i> Memórias</div>
+                        <div class="right padding-right txt-primary"><i class="mdi mdi-database"></i></div>
+                    </div>
+                </div>
+                <!-- SEARCHBAR-->
+                <div class="searchbar-backdrop"></div>
+                <form class="searchbar">
+                    <div class="searchbar-inner">
+                        <div class="searchbar-input-wrap">
+                            <input class="input-custom" type="search" placeholder="Procurar" />
+                            <i class="searchbar-icon"></i>
+                            <span class="input-clear-button"></span>
+                        </div>
+                        <span class="searchbar-disable-button">Cancel</span>
+                    </div>
+                </form>
+                <!-- FAB BUTTON-->
+                <div class="fab fab-extended fab-center-bottom">
+                    <a href="#" data-popup=".popup-pergunta" class="btn-primary-outline popup-open">
+                        <i class="mdi mdi-plus"></i>
+                        <div class="fab-text">Adicionar</div>
+                    </a>
+                </div>
+                <!-- POPUP PERGUNTAS-->
+                <div class="popup popup-pergunta">
+                    <div class="view">
+                        <div class="page">
+                            <div class="navbar">
+                                <div class="navbar-bg bg-black"></div>
+                                <div class="navbar-inner">
+                                    <div class="title txt-primary">Nova Pergunta</div>
+                                    <div class="right">
+                                        <!-- Link to close popup -->
+                                        <a class="link popup-close"><i class="mdi mdi-close-circle"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-content bg-black">
+                                <div class="list no-hairlines-md">
+                                    <ul>
+                                        <li class="item-content item-input">
+                                            <div class="item-inner">
+                                                <div class="item-title item-label txt-primary fw-bold">Titulo da
+                                                    pergunta</div>
+                                                <div class="item-input-wrap">
+                                                    <input class="input-custom border-bottom-primary" type="text" />
+                                                    <span class="input-clear-button"></span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="item-content item-input">
+                                            <div class="item-inner">
+                                                <div class="item-title item-label txt-primary fw-bold">O que a
+                                                    assistente entendeu</div>
+                                                <div class="item-input-wrap">
+                                                    <input class="input-custom border-bottom-primary" type="text" />
+                                                    <span class="input-clear-button"></span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- FAB BUTTON LEFT-->
+                                <div class="fab fab-extended fab-left-bottom">
+                                    <a href="#" class="btn-success-outline">
+                                        <i class="mdi mdi-content-save"></i>
+                                        <div class="fab-text"> Salvar</div>
+                                    </a>
+                                </div>
+
+                                <!-- FAB BUTTON CENTRALIZADO-->
+                                <div class="fab fab-extended fab-center-bottom">
+                                    <a href="#" class="btn-primary-outline">
+
+                                        <div class="fab-text"> <i class="mdi mdi-microphone"></i></div>
+                                    </a>
+                                </div>
+
+                                <!-- FAB BUTTON RIGHT-->
+                                <div class="fab fab-extended fab-right-bottom">
+                                    <a href="#" class="btn-danger-outline popup-close">
+                                        <i class="mdi mdi-cancel"></i>
+                                        <div class="fab-text"> Cancelar</div>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- POPUP RESPOSTAS-->
+                <div class="popup popup-resposta">
+                    <div class="view">
+                        <div class="page">
+                            <div class="navbar">
+                                <div class="navbar-bg bg-black"></div>
+                                <div class="navbar-inner">
+                                    <div class="title txt-primary">Resposta da Assistente</div>
+                                    <div class="right">
+                                        <!-- Link to close popup -->
+                                        <a class="link popup-close"><i class="mdi mdi-close-circle"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-content bg-black">
+                                <div class="list no-hairlines-md">
+                                    <ul>
+                                        <li class="item-content item-input">
+                                            <div class="item-inner">
+                                                <div class="item-title item-label txt-primary fw-bold">Resposta Escrita
+                                                </div>
+                                                <div class="item-input-wrap">
+                                                    <input class="input-custom border-bottom-primary" type="text" />
+                                                    <span class="input-clear-button"></span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="item-content item-input">
+                                            <div class="item-inner">
+                                                <div class="item-title item-label txt-primary fw-bold">Resposta Falada
+                                                </div>
+                                                <div class="item-input-wrap">
+                                                    <input class="input-custom border-bottom-primary" type="text" />
+                                                    <span class="input-clear-button"></span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- FAB BUTTON LEFT-->
+                                <div class="fab fab-extended fab-left-bottom">
+                                    <a href="#" class="btn-warning-outline">
+                                        <i class="mdi mdi-content-save"></i>
+                                        <div class="fab-text"> Salvar</div>
+                                    </a>
+                                </div>
+
+                                <!-- FAB BUTTON CENTRALIZADO-->
+                                <div class="fab fab-extended fab-center-bottom">
+                                    <a href="#" class="btn-primary-outline">
+
+                                        <div class="fab-text"> <i class="mdi mdi-bullhorn"></i></div>
+                                    </a>
+                                </div>
+
+                                <!-- FAB BUTTON RIGHT-->
+                                <div class="fab fab-extended fab-right-bottom">
+                                    <a href="#" class="btn-danger-outline popup-close">
+                                        <i class="mdi mdi-cancel"></i>
+                                        <div class="fab-text"> Cancelar</div>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scrollable page content -->
+                <div class="page-content bg-black txt-primary">
+                    <div class="block-title txt-primary">Aprendidas (2)</div>
+                    <div class="list media-list">
+                        <ul>
+                            <li>
+                                <a href="#" data-popup=".popup-resposta" class="item-link item-content popup-open">
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title fw-bold"><i class="mdi mdi-pencil"></i> Texto escrito
+                                                de
+                                                titulo</div>
+                                            <div class="item-after">
+                                                <span class="badge padding-left padding-right color-blue">ID: 1</span>
+                                            </div>
+                                        </div>
+                                        <div class="item-subtitle"><i class="mdi mdi-microphone"></i> Como a assistente
+                                            entendeu</div>
+
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title fw-bold"><i class="mdi mdi-pencil"></i> Outra coisa
+                                                qualquer digitada</div>
+                                            <div class="item-after">
+                                                <span class="badge padding-left padding-right color-blue">ID: 2</span>
+                                            </div>
+                                        </div>
+                                        <div class="item-subtitle"><i class="mdi mdi-microphone"></i> Outra coisa
+                                            qualquer digitada</div>
+
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="js/lib/framework7-bundle.js"></script>
+    <!-- Typed JS-->
+    <script type="text/javascript" src="js/lib/typed.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/router.js"></script>
+    <script>
+        var typed = new Typed('#resposta', {
+            strings: ['Isso é um teste de texto ^1000', ''],
+            typeSpeed: 40,
+            showCursor: false,
+            onComplete: function (self) {
+                toastBottom = app.toast.create({
+                    text: 'Fala concluída com sucesso!',
+                    closeTimeout: 2000,
+                });
+                toastBottom.open();
+            }
+
+        });
+    </script>
+</body>
+
+</html>
